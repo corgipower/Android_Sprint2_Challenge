@@ -3,6 +3,7 @@ package com.lambdaschool.sprint2_challenge.activities
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -28,9 +29,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_send.setOnClickListener {
+            val intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, getSelected())
+                type = "text/plain"
+            }
+            startActivityForResult(intent, 54321)
             createNotification(getSelected())
         }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+            if (requestCode == 54321 && resultCode == RESULT_OK) {
+                createNotification(getSelected())
+            }
+        }
+
 
     fun getSelected(): String {
         var selectedString = ""
