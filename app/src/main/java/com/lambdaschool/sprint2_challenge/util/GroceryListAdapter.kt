@@ -1,5 +1,6 @@
 package com.lambdaschool.sprint2_challenge.util
 
+import android.graphics.Color
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -43,6 +44,9 @@ class GroceryListAdapter(val groceryList: MutableList<Groceries>) : RecyclerView
             groceryTextView.text = grocery.itemName
             if (grocery.isSelected) {
                 groceryListParent.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.colorAccent))
+            } else {
+                groceryListParent.setBackgroundColor(Color.WHITE)
+
             }
         }
     }
