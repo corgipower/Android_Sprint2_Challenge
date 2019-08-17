@@ -41,10 +41,8 @@ class GroceryListAdapter(val groceryList: MutableList<Groceries>) : RecyclerView
         fun bindModel(grocery: Groceries) {
             groceryIconView.setImageResource(grocery.iconId)
             groceryTextView.text = grocery.itemName
-            if (!grocery.isSelected) {
+            if (grocery.isSelected) {
                 groceryListParent.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.colorAccent))
-            } else {
-                groceryListParent.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.colorPrimaryDark))
             }
         }
     }
