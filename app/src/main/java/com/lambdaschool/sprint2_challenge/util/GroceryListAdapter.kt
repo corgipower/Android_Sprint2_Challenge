@@ -1,15 +1,15 @@
-package com.lambdaschool.sprint2_challenge
+package com.lambdaschool.sprint2_challenge.util
 
-import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.lambdaschool.sprint2_challenge.R
+import com.lambdaschool.sprint2_challenge.data.Groceries
 import kotlinx.android.synthetic.main.grocery_list_item.view.*
 
 class GroceryListAdapter(val groceryList: MutableList<Groceries>) : RecyclerView.Adapter<GroceryListAdapter.ViewHolder>() {

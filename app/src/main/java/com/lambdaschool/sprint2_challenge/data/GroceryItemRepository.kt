@@ -1,7 +1,7 @@
-package com.lambdaschool.sprint2_challenge
+package com.lambdaschool.sprint2_challenge.data
 
-import com.lambdaschool.sprint2_challenge.ShoppingItemConstants.ICON_IDS
-import com.lambdaschool.sprint2_challenge.ShoppingItemConstants.ITEM_NAMES_RAW
+import com.lambdaschool.sprint2_challenge.data.ShoppingItemConstants.ICON_IDS
+import com.lambdaschool.sprint2_challenge.data.ShoppingItemConstants.ITEM_NAMES_RAW
 
 class GroceryItemRepository {
     companion object {

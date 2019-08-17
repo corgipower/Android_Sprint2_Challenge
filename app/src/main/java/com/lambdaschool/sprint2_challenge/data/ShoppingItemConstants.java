@@ -1,4 +1,6 @@
-package com.lambdaschool.sprint2_challenge;
+package com.lambdaschool.sprint2_challenge.data;
+
+import com.lambdaschool.sprint2_challenge.R;
 
 public class ShoppingItemConstants {
     public static final int[] ICON_IDS = new int[]{

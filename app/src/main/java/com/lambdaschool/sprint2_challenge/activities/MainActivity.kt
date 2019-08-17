@@ -1,4 +1,4 @@
-package com.lambdaschool.sprint2_challenge
+package com.lambdaschool.sprint2_challenge.activities
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -8,7 +8,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.NotificationCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
+import com.lambdaschool.sprint2_challenge.data.GroceryItemRepository
+import com.lambdaschool.sprint2_challenge.util.GroceryListAdapter
+import com.lambdaschool.sprint2_challenge.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -57,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
                 .setPriority(NotificationManager.IMPORTANCE_HIGH)
                 .setSmallIcon(android.R.drawable.ic_dialog_alert)
-                .setContentTitle("Groceries Notification")
+                .setContentTitle("List is shared")
                 .setContentText(selected)
                 .setAutoCancel(true)
         notificationManager.notify(1, notificationBuilder.build())
