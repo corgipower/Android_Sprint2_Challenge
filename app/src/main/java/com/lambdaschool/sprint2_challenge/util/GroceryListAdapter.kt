@@ -26,9 +26,10 @@ class GroceryListAdapter(val groceryList: MutableList<Groceries>) : RecyclerView
         val grocery = groceryList[position]
         holder.bindModel(grocery)
 
-        holder.groceryListParent.setOnClickListener {
-            grocery.isSelected = !grocery.isSelected
-            notifyItemChanged(position)
+        holder.groceryListParent.setOnClickListener {view ->
+            val intent = Intent(view.context, ItemDetailActivity::class.java)
+            intent.putExtra(ItemDetailActivity.DETAIL_KEY, grocery)
+            view.context.startActivity(intent)
         }
         setEnterAnimation(holder.groceryListParent, position)
     }
