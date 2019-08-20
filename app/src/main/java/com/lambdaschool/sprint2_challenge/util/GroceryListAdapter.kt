@@ -37,7 +37,7 @@ class GroceryListAdapter(val groceryList: MutableList<Groceries>) : RecyclerView
     }
 
     fun setEnterAnimation(viewToAnimate: View, position: Int) {
-        val animation: Animation = AnimationUtils.loadAnimation(viewToAnimate.context, android.R.anim.slide_in_left)
+        val animation: Animation = AnimationUtils.loadAnimation(viewToAnimate.context, R.anim.my_slide_in_left)
         viewToAnimate.startAnimation(animation)
     }
 
